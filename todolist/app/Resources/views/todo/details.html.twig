@@ -1,0 +1,24 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<!-- just placing a link back -->
+
+<a class="btn btn-default" href="/">Back to ToDos</a> 
+<hr>
+<h2 class="page-header">{{todo.name}}</h2>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">	
+<ul class="list-group">
+	<li class="list-group-item">Category: {{todo.category}}</li>
+	<li class="list-group-item">Priority: {{todo.priority}}</li>
+	<li class="list-group-item">Due: <strong>{{todo.dueDate|date('Y-m-d H:i:s')}}</strong></li>
+</ul>
+<p>
+	{{todo.description}}
+</p>
+	</div>	
+</div>
+
+{% endblock %}
